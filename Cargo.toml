@@ -1,0 +1,14 @@
+[package]
+name = "rnr"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+indented = "0.1.0"
+proc-macro2 = "1.0.70"
+quote = "1.0.33"
+regex = "1.10.2"
+structopt = "0.3.26"
+mips = { git = "https://vesuvio-git.neteq.ltu.se/pln/mips.git" }
+syn = { version = "2.0.40", features = ["full", "extra-traits"] }
+clap = { version = "4.5.53", features = ["derive"] }

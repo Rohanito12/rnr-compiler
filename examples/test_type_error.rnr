@@ -1,0 +1,6 @@
+fn main() -> i32 {
+    let x: i32 = 10;
+    let y: bool = true;
+    // This should cause a type error.
+    x + y 
+}

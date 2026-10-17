@@ -1,0 +1,11 @@
+fn main() -> i32 {
+    let mut x: i32 = add(3,5);
+    x
+}
+
+fn add(a: i32, b: i32) -> i32 {
+    fn add(a:i32) -> i32 {
+        a
+    }
+    a + add(b)
+}

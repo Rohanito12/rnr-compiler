@@ -1,0 +1,14 @@
+fn main() {
+    let a: String = "hello";
+    let b: String = "hello";
+    let c: String = "world";
+
+    if a == b {
+        println!("a and b are equal. {}", 0);
+    }
+    if a == c {
+        println!("a and c are equal. {}", 0);
+    } else {
+        println!("a and c are not equal. {}", 0);
+    }
+}

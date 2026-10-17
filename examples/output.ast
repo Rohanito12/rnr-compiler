@@ -1,0 +1,113 @@
+Prog(
+    [
+        FnDeclaration {
+            id: "main",
+            parameters: Parameters(
+                [],
+            ),
+            ty: Some(
+                I32,
+            ),
+            body: Block {
+                statements: [
+                    Let(
+                        Mutable(
+                            true,
+                        ),
+                        "x",
+                        Some(
+                            I32,
+                        ),
+                        Some(
+                            Lit(
+                                Int(
+                                    10,
+                                ),
+                            ),
+                        ),
+                    ),
+                    While(
+                        BinOp(
+                            Lt,
+                            Ident(
+                                "x",
+                            ),
+                            Lit(
+                                Int(
+                                    15,
+                                ),
+                            ),
+                        ),
+                        Block {
+                            statements: [
+                                Assign(
+                                    Ident(
+                                        "x",
+                                    ),
+                                    BinOp(
+                                        Add,
+                                        Ident(
+                                            "x",
+                                        ),
+                                        Lit(
+                                            Int(
+                                                1,
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ],
+                            semi: true,
+                        },
+                    ),
+                    Expr(
+                        Ident(
+                            "x",
+                        ),
+                    ),
+                ],
+                semi: false,
+            },
+        },
+        FnDeclaration {
+            id: "add",
+            parameters: Parameters(
+                [
+                    Parameter {
+                        mutable: Mutable(
+                            false,
+                        ),
+                        id: "a",
+                        ty: I32,
+                    },
+                    Parameter {
+                        mutable: Mutable(
+                            false,
+                        ),
+                        id: "b",
+                        ty: I32,
+                    },
+                ],
+            ),
+            ty: Some(
+                I32,
+            ),
+            body: Block {
+                statements: [
+                    Expr(
+                        BinOp(
+                            Add,
+                            Ident(
+                                "a",
+                            ),
+                            Ident(
+                                "b",
+                            ),
+                        ),
+                    ),
+                ],
+                semi: false,
+            },
+        },
+    ],
+)
